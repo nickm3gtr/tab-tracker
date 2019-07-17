@@ -9,8 +9,8 @@ app.use(bodyParser.json());
 app.use(morgan('combined'));
 app.use(cors());
 
-app.get('/status', (req, res) => {
-    res.json({ msg: 'Hello' });
+app.post('/register', (req, res) => {
+    res.json({ msg: `Hello ${req.body.email}! Your account was created.` });
 })
 
 app.listen(5000, () => console.log('Server started...'));
